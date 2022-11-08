@@ -1,0 +1,8 @@
+{
+  "label": "Ubuntu Server 20.04",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Ubuntu Server 20.04 を自宅サーバーで運用するためのガイド"
+  }
+}
