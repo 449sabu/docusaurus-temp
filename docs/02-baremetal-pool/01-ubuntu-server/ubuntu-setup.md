@@ -1,7 +1,7 @@
 ---
 ---
 
-### セットアップ
+# セットアップ
 
 ## LVM
 
@@ -75,3 +75,13 @@ tmpfs                              7.8G     0  7.8G   0% /run/shm
 tmpfs                              1.6G     0  1.6G   0% /run/user/1000
 total                              234G   94G  132G  42% -
 ```
+
+## 参考
+- [【 df 】コマンド――ディスクの空き領域を表示する](https://atmarkit.itmedia.co.jp/ait/articles/1610/24/news017.html)  
+- [【 vgs 】コマンド――ボリュームグループの情報を表示する](https://atmarkit.itmedia.co.jp/ait/articles/1908/30/news020.html)  
+- [【 lvextend 】コマンド――論理ボリュームのサイズを拡張する](https://atmarkit.itmedia.co.jp/ait/articles/1910/04/news021.html)  
+- [第4回　ストレージを柔軟に管理する（LVMの操作1）](https://shell-mag.com/4th_linuxoperations/)  
+- [【Linux】Ubuntu20.04でlvmの拡張をする](https://www.myit-service.com/blog/ubuntu-lvm/)  
+- [Linuxディスク関連コマンドまとめ](https://qiita.com/aosho235/items/ad9a4764e77ba43c9d76)  
+- [Ubuntu 20.04でシステム領域のディスク容量の拡張を行う](https://tech-mmmm.blogspot.com/2020/06/ubuntu-2004.html)  
+- [resize2fs - システム管理コマンドの説明](https://kazmax.zpp.jp/cmd/r/resize2fs.8.html#:~:text=resize2fs%20%E3%81%AF%20ext2%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0,%E6%96%B0%E3%81%97%E3%81%84%E3%82%B5%E3%82%A4%E3%82%BA%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B%E3%80%82)
