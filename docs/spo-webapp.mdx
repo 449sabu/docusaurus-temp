@@ -42,6 +42,27 @@ VercelへはGithubアカウントでログインできます。
 
 ![img](/img/vercel3.png)
 
+Vercelにログインできると以下のような画面になるので、「Continue with GitHub」をクリック。
+
+![img](/img/vercel4.png)
+
+リポジトリの一覧から「spo-webapp」を探し、「Import」をクリック。
+
+![img](/img/vercel5.png)
+
+「Environment Variables」を選択し、環境変数を設定します。  
+NameとValueにそれぞれ入力し「Add」をクリック。  
+
+|  Name  |  Value (Will Be Encrypted)  |  必須  |
+| ---- | ---- | ---- |
+|  NEXT_PUBLIC_POOL_ID  |  自分のPool ID  |  ◎  |
+|  MAIL_TO  |  自分のGmailアドレス  |  ◎  |
+|  MAIL_PASS  |  Googleアプリkey  |  ◎  |
+
+![img](/img/vercel6.png)
+
+必要な環境変数を入力出来たら「Deploy」をクリック。
+
 
 ### お問い合わせフォームを設置する
 
