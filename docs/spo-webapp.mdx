@@ -13,14 +13,29 @@ sidebar_label: "SPO-WebApp"
 ## 事前準備
 - [Googleアカウント](https://www.google.com/intl/ja/account/about/)の作成（新規作成を推奨）  
 プールへのお問い合わせ先にGmailを使用します。メールアドレスを一般公開するとスパムメールなどが送られてくる場合がありますので、普段使いのメールアドレスではなく専用のメールアドレスを新規に作成することを推奨します。
-- [Githubアカウント](https://github.com/)の作成
+- [Githubアカウント](https://github.com/)の作成  
 プール運営で使用しているアカウントでかまいません。リポジトリをGithubに複製し、[Versel](https://vercel.com/login?next=)でサイトを公開するときに使用します。
 
 ## 利用方法
 
-### GoogleアプリKeyを発行する（編集中です）
+### Googleアプリパスワードを発行する
 これから作成するサイトには、メールアドレスを利用したお問い合わせフォームが標準搭載されています。  
-Googleアカウント作成手順はこのマニュアルでは省略いたします。Googleアカウントをお持ちでない場合は、新規作成してから手順を進めてください。  
+Googleアカウントの作成手順はこのマニュアルでは省略いたします。Googleアカウントをお持ちでない場合は、新規作成してから手順を進めてください。  
+
+Googleにログイン後、「セキュリティ」設定から「アプリパスワード」を選択。  
+
+![img](/img/google.png)
+
+「アプリ選択」で「その他」を選択し、「SPO-WebApp」と入力し「生成」を選択。  
+
+![img](/img/google2.png)
+
+16桁のパスワードが発行されるので控えておいてください。  
+最後にサイトを公開するときに環境変数に設定します。
+
+![img](/img/google3.png)
+
+
 
 ### リポジトリを複製する
 はじめに、自分のGithubに「SPO-WebApp」のコードを複製します。
@@ -33,35 +48,39 @@ Githubにログインした状態で https://github.com/449sabu/spo-webapp に�
 ![img](/img/create-fork.png)
 
 ### サイトを公開する
-サイトを公開するためにVercelというサーバーを提供しているサービスを利用します。  
+- サイトを公開するためにVercelというサーバーを提供しているサービスを利用します。  
 VercelへはGithubアカウントでログインできます。  
 
 ![img](/img/vercel.png)
 
-電話認証に進むので、居住国を選択し電話番号を入力し送られてくるパスコードを入力してください。  
+- 電話認証に進むので、居住国を選択し電話番号を入力し送られてくるパスコードを入力してください。  
 
 ![img](/img/vercel2.png)
 
-電話認証を終了すると、「どのリポジトリを読み込むか」というポップアップが出てくるので、「All repositories」が選択された状態で「Install」をクリック。  
+- 電話認証を終了すると、「どのリポジトリを読み込むか」というポップアップが出てくるので、「All repositories」が選択された状態で「Install」をクリック。  
 
 ![img](/img/vercel3.png)
 
-Vercelにログインできると以下のような画面になるので、「Continue with GitHub」をクリック。
+- Vercelにログインできると以下のような画面になるので、「Continue with GitHub」をクリック。
 
 ![img](/img/vercel4.png)
 
-リポジトリの一覧から「spo-webapp」を探し、「Import」をクリック。
+- リポジトリの一覧から「spo-webapp」を探し、「Import」をクリック。
 
 ![img](/img/vercel5.png)
 
-「Environment Variables」を選択し、環境変数を設定します。  
+- 一番上の「Project Name」という項目は、サイトを公開したときに「https:// \* \* \* .vercel.app/」の「 \* \* \* 」部分を設定できます。  
+後から独自ドメインを設定する場合でも、「ciel-stake-pool」のように自分のプール名に書き換えてください。
+
+- 「Environment Variables」を選択し、環境変数を設定します。  
 以下の表を参考にNameとValueにそれぞれ入力し「Add」をクリック。  
 
 |  Name  |  Value (Will Be Encrypted)  |  必須  |
 | ---- | ---- | ---- |
 |  NEXT_PUBLIC_POOL_ID  |  自分のPool ID（pool...で始まるもの）  |  ◎  |
-|  MAIL_TO  |  自分のGmailアドレス  |  ◎  |
-|  MAIL_PASS  |  Googleアプリkey  |  ◎  |
+|  NEXT_PUBLIC_HEX_POOL_ID  |  自分のPool ID  |  ◎  |
+|  MAIL_TO  |  お問い合わせ用のGmailアドレス  |  ◎  |
+|  MAIL_PASS  |  hldlgqfjffglprss  |  ◎  |
 
 ![img](/img/vercel6.png)
 
