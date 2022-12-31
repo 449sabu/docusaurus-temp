@@ -35,3 +35,8 @@ git checkout <ブランチ名>    //指定したブランチに切り替える
 git checkout <ブランチ名>           //マージされる側に切り替えておく
 git merge <ブランチ名> --no-edit    //コメントが自動で残るオプション
 ```
+
+## ローカルをリモートに更新
+```
+git pull origin main
+```
